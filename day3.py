@@ -1,4 +1,11 @@
 input = [1,2,3, [1,2,3,[3,4],2]]
 ##output = [1,2,3,1,2,3,3,4,2]
-lst=[*input[:3],*input[-1][:3],*input[-1][-2][:2],input[-1][-1]]
-print(lst)
+def fltlist(lswt):
+    lst=[]
+    for i in lswt:
+        if isinstance(i, list):
+            lst.extend(fltlist(i))
+        else:
+            lst.append(i)
+    return lst
+print(fltlist(input))
