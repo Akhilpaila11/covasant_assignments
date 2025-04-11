@@ -16,7 +16,6 @@ print(f"Size: {max_file_size} bytes")
 
 Q-2
 import os
-
 def collect_text_files(directory, filter_pattern, output_file):
     with open(output_file, 'w') as outfile:
         for root, _, files in os.walk(directory):
