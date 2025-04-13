@@ -3,7 +3,6 @@ class Poly:
         self.coeffs = list(coeffs)
 
     def __add__(self, other):
-        # Pad the shorter list with zeros at the beginning
         len_diff = len(self.coeffs) - len(other.coeffs)
         if len_diff > 0:
             padded_other = [0]*len_diff + other.coeffs
